@@ -28,9 +28,22 @@
         padding: 5px 10px;
         font-size: 20px;
       }
+
+      .container {
+        margin: 40px auto;
+      }
+
+      .btn {
+        margin: 8px auto;
+      }
+
+      .card {
+        margin: 8px auto;
+      }
     </style>
     <title>Travel Agency</title>
   </head>
+
   <body>
     <div class="container">
       <!-- Navigation Section -->
@@ -70,53 +83,56 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+              <a class="nav-link" href="#dealsOfTheWeek">Deals of the Week</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
+              <a class="nav-link" href="#welcomeSummerSection"
+                >Summer Section</a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dealOfTheDay">Deal of the Day</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lastMinuteSection"
+                >Last Minute Section</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#carouselExampleCaptions"
+                >Testimonial Section</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacts</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+          </li>-->
+            <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
+          <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form> -->
         </div>
       </nav>
       <!-- Jumbotron Section -->
 
-      <div class="jumbotron collapse" id="jumbotron">
+      <div class="jumbotron collapse show" id="jumbotron">
         <h1 class="display-4">Hello, world!</h1>
         <p class="lead">
           Let us take care of you from the moment you purchuse to your return
@@ -148,7 +164,7 @@
             >Deals of the Week</a
           >
         </div>
-        <div class="row collapse" id="dealsOfTheWeek">
+        <div class="row collapse show" id="dealsOfTheWeek">
           <div class="col-6 col-md-4 col-lg-3">
             <div class="card destination">
               <img
@@ -220,7 +236,7 @@
                 alt=""
               />
               <div class="card-body">
-                <h5 class="card-title">Amsterdamn</h5>
+                <h5 class="card-title">Amsterdam</h5>
                 <p class="card-text">from £39pp</p>
               </div>
               <ul class="list-group list-group-flush">
@@ -247,7 +263,7 @@
           >
         </div>
         <div
-          class="container shadow-lg p-3 mb-5 bg-white rounded collapse"
+          class="container shadow-lg p-3 mb-5 bg-white rounded collapse show"
           id="welcomeSummerSection"
         >
           <div class="row">
@@ -296,7 +312,7 @@
           </div>
         </div>
         <!-- Deal of the Day -->
-        <div class="mx-auto text-center">
+        <div class="mx-auto text-center d-none d-md-block">
           <a
             class="btn btn-outline-secondary"
             data-toggle="collapse"
@@ -307,7 +323,7 @@
             >Deal of the Day</a
           >
         </div>
-        <div id="dealOfTheDay" class="collapse">
+        <div id="dealOfTheDay" class="collapse show">
           <div class="container d-none d-md-block">
             <div class="row">
               <div class="col-8 destination">
@@ -340,8 +356,8 @@
           >Last Minute Section</a
         >
       </div>
-      <div class="container">
-        <div id="lastMinuteSection" class="collapse">
+      <div class="container my-0 my-md-1">
+        <div id="lastMinuteSection" class="collapse show">
           <div class="row">
             <div class="col-sm-6">
               <div class="card destination">
@@ -387,7 +403,7 @@
       <div class="container">
         <div
           id="carouselExampleCaptions"
-          class="carousel slide collapse"
+          class="carousel slide collapse show"
           data-ride="carousel"
         >
           <ol class="carousel-indicators">
@@ -467,14 +483,14 @@
       </div>
       <!-- Counting "travel" -->
 
-      <div class="container">
+      <div class="container" id="contact">
         <p class="text-center text-secondary">
           <script>
             function travelImgNbr() {
               let travelImage = document.getElementsByClassName("destination")
                 .length;
               document.write(
-                "There are " + travelImage + " travel imgages on this page."
+                "There are " + travelImage + " travel images on this page."
               );
             }
             console.log(travelImgNbr());
@@ -485,6 +501,7 @@
       <div class="container justify-content-center d-flex">
         <p class="text-center">
           Company Info
+          <br />
           <!-- Button trigger modal -->
           <button
             type="button"
